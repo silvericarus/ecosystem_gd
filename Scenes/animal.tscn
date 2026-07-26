@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bic6sdcjedy67"]
+
+[ext_resource type="Script" uid="uid://degr0isclmi7f" path="res://Scripts/animal.gd" id="1_2gra4"]
+
+[node name="Animal" type="CharacterBody2D" unique_id=1580782701]
+script = ExtResource("1_2gra4")
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1567529595]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1334490935]
+
+[node name="Timer" type="Timer" parent="." unique_id=1873664524]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

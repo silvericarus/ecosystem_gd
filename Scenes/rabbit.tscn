@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://clmedw1plmvgs"]
+
+[ext_resource type="Script" uid="uid://qbwsoc7hq2eh" path="res://Scenes/rabbit.gd" id="1_146lt"]
+
+[node name="Rabbit" type="CharacterBody2D" unique_id=165242936]
+scale = Vector2(0.35, 0.35)
+script = ExtResource("1_146lt")
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1772521749]
+polygon = PackedVector2Array(39, 37, -46, 38, -47, -48, -24, -49, -25, -89, -28, -94, -28, -100, -30, -106, -29, -121, -22, -125, -16, -125, -11, -122, -7, -114, -7, -99, -5, -85, -1, -65, 0, -59, 0, -48, 6, -49, 6, -49, 6, -54, 6, -63, 6, -71, 6, -81, 8, -93, 9, -102, 11, -116, 12, -122, 16, -127, 21, -126, 25, -124, 29, -122, 31, -118, 30, -108, 28, -101, 25, -89, 24, -79, 23, -64, 23, -54, 20, -49, 20, -49, 28, -48, 41, -49)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=569980276]
+polygon = PackedVector2Array(39, 37, -46, 38, -47, -48, -24, -49, -25, -89, -28, -94, -28, -100, -30, -106, -29, -121, -22, -125, -16, -125, -11, -122, -7, -114, -7, -99, -5, -85, -1, -65, 0, -59, 0, -48, 6, -49, 6, -49, 6, -54, 6, -63, 6, -71, 6, -81, 8, -93, 9, -102, 11, -116, 12, -122, 16, -127, 21, -126, 25, -124, 29, -122, 31, -118, 30, -108, 28, -101, 25, -89, 24, -79, 23, -64, 23, -54, 20, -49, 20, -49, 28, -48, 41, -49)
+
+[node name="Timer" type="Timer" parent="." unique_id=1020176490]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

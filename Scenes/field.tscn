@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://oj1xs7h1566a"]
+
+[ext_resource type="PackedScene" uid="uid://bjayqptt4atcw" path="res://Scenes/tree.tscn" id="1_8juqs"]
+[ext_resource type="PackedScene" uid="uid://clmedw1plmvgs" path="res://Scenes/rabbit.tscn" id="2_s2mji"]
+
+[node name="Field" type="Node2D" unique_id=1802375276]
+
+[node name="TextureRect" type="ColorRect" parent="." unique_id=1869511242]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = 1.0
+offset_right = 1152.0
+offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.54363865, 0.111966886, 1)
+
+[node name="Forest" type="Node2D" parent="." unique_id=230091956]
+
+[node name="Tree" parent="Forest" unique_id=1761898995 instance=ExtResource("1_8juqs")]
+position = Vector2(264, 237)
+
+[node name="Tree2" parent="Forest" unique_id=1220559092 instance=ExtResource("1_8juqs")]
+position = Vector2(833, 396)
+
+[node name="Tree3" parent="Forest" unique_id=2075521143 instance=ExtResource("1_8juqs")]
+position = Vector2(733, 175)
+
+[node name="Tree4" parent="Forest" unique_id=389307924 instance=ExtResource("1_8juqs")]
+position = Vector2(371, 435)
+
+[node name="Mammals" type="Node2D" parent="." unique_id=1438962940]
+
+[node name="Rabbit" parent="Mammals" unique_id=165242936 instance=ExtResource("2_s2mji")]
+position = Vector2(162, 413)
+
+[node name="Rabbit2" parent="Mammals" unique_id=876083398 instance=ExtResource("2_s2mji")]
+position = Vector2(627, 330.99997)
