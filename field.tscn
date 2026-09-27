@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://oj1xs7h1566a"]
+
+[ext_resource type="PackedScene" uid="uid://ce70vpgn8mxoy" path="res://Characters/character.tscn" id="1_0cutk"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3khbg"]
+albedo_color = Color(3.970787e-06, 0.36738208, 0.085730635, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_07rqp"]
+size = Vector3(1, 0.06298828, 1)
+
+[node name="Field" type="Node3D" unique_id=660067058]
+
+[node name="Floor" type="MeshInstance3D" parent="." unique_id=1255193954]
+transform = Transform3D(20, 0, 0, 0, 3, 0, 0, 0, 20, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_3khbg")
+mesh = SubResource("BoxMesh_07rqp")
+
+[node name="Character" parent="." unique_id=470299192 instance=ExtResource("1_0cutk")]
+transform = Transform3D(0.7141123, -0.48120192, 0.50841755, -0.0037247688, 0.72365624, 0.69015056, -0.70002127, -0.49473873, 0.5149794, 0, 0.1, 0)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1496173602]
+transform = Transform3D(0.7141123, -0.48120192, 0.50841755, -0.0037247688, 0.72365624, 0.69015056, -0.70002127, -0.49473873, 0.5149794, 0, 1.316889, 0)
+fov = 78.5317
